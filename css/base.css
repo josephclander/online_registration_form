@@ -4,5 +4,236 @@
 
 body {
 	font-family: 'Merriweather', serif;
+	color: #000;
+	font-size: 1em;
 }
+
+.header h1 {
+	color: white;
+}
+
+h1,
+legend {
+	color: rgba(44,57,70, 1);
+	font-size: 1.2em;
+}
+
+.header {
+	text-align: center;
+	padding: 20px 0;
+	background-color: rgb(44,57,70);
+	margin-bottom: 35px;
+}
+
+.wrapper {
+	max-width: 320px;
+	margin: 10px auto;
+	background: white;
+}
+
+hr#first {
+	border-top: 5px solid;
+	margin-bottom: -6px;
+}
+
+hr#second {
+	border-top: 3px solid;
+}
+
+hr#third {
+	border-top: 3px solid;
+	margin-bottom: 30px;
+}
+
+.intro,
+p:last-child {
+	margin-bottom: 40px;
+	text-align: center;
+	color: lightgrey;
+}
+
+/************************************
+Form styles
+************************************/
+
+form {
+	margin: 20px 0;
+	color: rgba(44,57,70, .7);
+}
+
+fieldset {
+	border: none;
+}
+
+form:first-of-type {
+	margin-top: 30px;
+}
+/*indicates the first fieldset*/
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+	border: none;
+	height: auto;
+	margin: 0;
+	outline: none;
+	padding: 15px;
+	width: 100%;
+	background-color: rgba(239,240,241,.4);
+	border-radius: 5px;
+	margin-bottom: 20px;
+
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+textarea:hover,
+select:hover {
+	background-color: rgba(239,240,241,1);
+}
+
+select {
+	height: 50px;
+}
+
+input[name^="zip"] {
+	width: initial;
+}
+/*undo the width for this one element*/
+
+label {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+label[for^="name"] {
+	margin-top: 15px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+
+
+/************************************
+Button and action styles
+************************************/
+
+/*checkbox design*/
+
+ input[type="checkbox"]:before {
+	display: inline-block;
+	-webkit-appearance: none;
+	border: 1px solid lightgrey;
+	margin-left: -3px;
+	background-color: rgba(239,240,241,1);
+	content: "";
+	font-size: 12px;
+	text-align: center;
+	border-radius: 5px;
+	width: 15px;
+	height: 15px;
+}
+
+input[type="checkbox"]:checked:before {
+	display: inline-block;
+	margin-bottom: 7px;
+	margin-left: -3px;
+	background-color: rgba(239,240,241,1);
+	border: 2px solid darkblue;
+	content: "\2713";
+	text-align: center;
+	color: darkblue;
+	border-radius: 5px;
+	width: 15px;
+	height: 15px;
+}        
+
+
+input:placeholder-shown {
+	text-align: right;
+	font-size: 0.8em;
+}
+
+/*not sure if this works in all browsers*/
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+	border: 2px solid darkblue;
+	
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+/*this looks so clunky!*/
+
+
+/*submit button transitions*/
+
+input[type="submit"] {
+	width: 100%;
+	padding: 20px 0;
+	background-color: rgb(33,192,181);
+	color: white;
+	border-radius: 5px;
+	font-size: 1.3em;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background-color: rgb(255, 128, 128);
+}
+
+input[type="submit"]:active {
+	background-color: rgb(255, 128, 128);
+	box-shadow: inset 0 0 5px 10px rgba(0,0,0,.3);
+}
+
+/***************************************
+MEDIA QUERIES
+****************************************/
+
+/*tablet screens*/
+
+@media screen and (min-width: 480px) {
+
+	.wrapper {
+		max-width: 480px;
+	}
+
+}
+
+/*desktop screens*/
+
+@media screen and (min-width: 760px) {
+
+	.wrapper {
+		max-width: 760px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
