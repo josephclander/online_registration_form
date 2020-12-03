@@ -37,7 +37,7 @@
 	     	<input type="email" id="email" name="email" placeholder="Required" required>
 
 	     	<label for="phone">Phone Number</label>
-	     	<input type="number" id="phone" name="phone">
+	     	<input type="tel" id="phone" name="phone">
 	     	<!-- documentation says that type telephone isn't really supported yet -->
 	     	<label for="street">Street Address</label>
 	     	<input type="text" id="street" name="street">
@@ -110,16 +110,31 @@
 			<legend>Newsletter</legend>
 			
 			<p>Select the newsletters you would like to receive</p>
-			<input type="checkbox" id="html" name="newsletter" value="html"><label for="html">HTML News</label><br>
+			<label class="newsletter__label" for="html">HTML News
+				<input class="newsletter__input" type="checkbox" id="html" name="newsletter" value="html">
+				<span class="newsletter__checkmark"></span>
+			</label>
 
-			<input type="checkbox" id="css" name="newsletter" value="css"><label for="css">CSS News</label><br>
+			<label class="newsletter__label" for="css">CSS News
+				<input class="newsletter__input" type="checkbox" id="css" name="newsletter" value="css">
+				<span class="newsletter__checkmark"></span>
+			</label>
 
-			<input type="checkbox" id="javascript" name="newsletter" value="javascript"><label for="javascript">Javascript News</label><br>
+			<label class="newsletter__label" for="javascript">Javascript News
+				<input class="newsletter__input" type="checkbox" id="javascript" name="newsletter" value="javascript">
+				<span class="newsletter__checkmark"></span>
+			</label>
 
 			<p>Newsletter format</p>
 
-			  <input type="radio" name="format" value="html">HTML<br>
-			  <input type="radio" name="format" value="plain">Plain text<br>
+			  <label class="format" for="format-html">
+				<input type="radio" name="format" value="format-html" id="format-html">
+				HTML
+			  </label>
+			  <label class="format" for="format-plain">
+				  <input type="radio" name="format" value="format-plain" id="format-plain">
+				  Plain text
+			  </label>
 
 			 <p>Other topics you'd like to hear about</p>
 
