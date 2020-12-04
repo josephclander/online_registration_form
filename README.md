@@ -71,3 +71,13 @@ Make sure the HTML file includes the viewport meta tag in the head of the docume
 
 7. Use CSS Transition effects for highlighting the look of the form fields both when they are "focused" and "blurred."
    - For example, make a background color fade into view when the field the user clicks into a text field, and fade out when the user clicks or tabs out of the field.
+
+# Notes from the build
+
+Tested on the following browsers: Chrome 87, Safari 14.0.1 and Firefox 84.0b7.
+
+The select form field is different on each of the browsers. Initially I assumed it was just the down arrows but Safari wouldn't remove the 3D styling without removing the arrow as well. I believed the arrow alone may have been ok being slightly different across browsers as you cannot control the looks when you click just with CSS. However Safari's shading was bit much so I added a custom one.
+
+The fieldset legend acted differently on Chrome to how it did on Firefox and Safari. To be able to style it I swapped the legend for an h3 tag which I thought would still hold some semantic placement.
+
+The phone number tag has a type attribute of 'tel' and I put a placeholder in there to show a UK mobile type. I read that there is mixed approaches from browsers with this. I'm sure a more standard approach is some backend validation for formatting the number.
