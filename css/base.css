@@ -47,7 +47,8 @@ hr#second {
   border-top: 3px solid;
 }
 
-hr#third {
+hr#third,
+hr#fourth {
   border-top: 3px solid;
   margin-bottom: 30px;
 }
@@ -97,7 +98,8 @@ select:hover {
   background-color: #c0c0c0;
 }
 
-.contact-input {
+.contact-input,
+.about {
   margin-top: 30px;
   margin-bottom: 30px;
   display: grid;
@@ -106,7 +108,8 @@ select:hover {
   align-items: center;
 }
 
-.contact-input h3 {
+.contact-input h3,
+.about h3 {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 }
@@ -151,7 +154,10 @@ input[type='radio'] {
 Button and action styles
 ************************************/
 
-/*checkbox design*/
+/************************************
+Newsletter
+  - checkbox design
+************************************/
 
 .newsletter__label {
   position: relative;
@@ -214,6 +220,10 @@ Button and action styles
   width: 17px;
   height: 17px;
 }
+
+/************************************
+Inputs
+************************************/
 
 input:placeholder-shown {
   text-align: right;
@@ -280,7 +290,8 @@ MEDIA QUERIES
     max-width: 760px;
   }
 
-  .contact-input {
+  .contact-input,
+  .about {
     grid-template-columns: 1fr 3fr;
   }
 }
