@@ -81,3 +81,5 @@ The select form field is different on each of the browsers. Initially I assumed 
 The fieldset legend acted differently on Chrome to how it did on Firefox and Safari. To be able to style it I swapped the legend for an h3 tag which I thought would still hold some semantic placement.
 
 The phone number tag has a type attribute of 'tel' and I put a placeholder in there to show a UK mobile type. I read that there is mixed approaches from browsers with this. I'm sure a more standard approach is some backend validation for formatting the number.
+
+On Safari, I noticed that the text, 'CSS' on the SVG in the background doesn't render centrally as it should and does on Chrome and Firefox. As this is a minor embelishment, I will leave it at this stage. It would be unfortunate if it needs to be converted to a png or jpeg.
