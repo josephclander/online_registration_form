@@ -232,6 +232,69 @@ Newsletter
 }
 
 /************************************
+Newsletter Format
+  - radio button design
+************************************/
+
+.format {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+.format input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.format__checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: rgba(239, 240, 241, 1);
+  border: 1px solid rgba(239, 240, 241, 1);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.format__checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.format input:checked ~ .format__checkmark::after {
+  display: block;
+  top: 4px;
+  left: 4px;
+  height: 7px;
+  width: 7px;
+  background-color: darkblue;
+  border-radius: 50%;
+}
+
+.format:hover .format__checkmark {
+  border: 1px solid #c0c0c0;
+  background-color: #c0c0c0;
+}
+
+.format input:focus ~ .format__checkmark {
+  border: 1px solid darkblue;
+}
+
+/************************************
 Inputs
 ************************************/
 
@@ -249,12 +312,6 @@ select:focus,
 textarea:focus {
   border: 2px solid darkblue;
   background-color: #c0c0c0;
-}
-
-.format {
-  display: block;
-  cursor: pointer;
-  margin-bottom: 10px;
 }
 
 /*submit button transitions*/
