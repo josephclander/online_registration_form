@@ -134,7 +134,7 @@ select:hover {
 }
 
 input[name^='zip'] {
-  align-self: flex-start;
+  justify-self: flex-start;
   width: auto;
 }
 /*undo the width for this one element*/
