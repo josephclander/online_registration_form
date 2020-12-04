@@ -13,9 +13,16 @@ body {
 }
 
 h1,
-legend {
+h3 {
   color: rgba(44, 57, 70, 1);
-  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
 }
 
 .header {
@@ -65,11 +72,6 @@ fieldset {
   border: none;
 }
 
-form:first-of-type {
-  margin-top: 30px;
-}
-/*indicates the first fieldset*/
-
 input[type='text'],
 input[type='tel'],
 input[type='email'],
@@ -81,7 +83,6 @@ select {
   width: 100%;
   background-color: rgba(239, 240, 241, 0.4);
   border-radius: 5px;
-  margin-bottom: 20px;
 
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -96,27 +97,54 @@ select:hover {
   background-color: #c0c0c0;
 }
 
-select {
+.contact-input {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-column-gap: 12px;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+
+.contact-input h3 {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.state-select {
+  position: relative;
+}
+
+.state-select::after {
+  position: absolute;
+  content: '>';
+  font-size: 21px;
+  color: inherit;
+  top: 0;
+  right: 15px;
+  transform: translateY(50%) rotate(90deg);
+  pointer-events: none;
+}
+
+.state-select select {
   line-height: 1.3;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 input[name^='zip'] {
-  display: block;
-  width: initial;
+  align-self: flex-start;
+  width: auto;
 }
 /*undo the width for this one element*/
 
-label {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-label[for^='name'] {
-  margin-top: 15px;
-}
-
 input[type='radio'] {
   margin-right: 9px;
+}
+
+.newsletter textarea {
+  margin-bottom: 30px;
 }
 
 /************************************
@@ -206,6 +234,7 @@ textarea:focus {
 .format {
   display: block;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 /*submit button transitions*/
@@ -249,5 +278,9 @@ MEDIA QUERIES
 @media screen and (min-width: 760px) {
   .wrapper {
     max-width: 760px;
+  }
+
+  .contact-input {
+    grid-template-columns: 1fr 3fr;
   }
 }
