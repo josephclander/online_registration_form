@@ -1,3 +1,17 @@
+:root {
+  /* colors */
+  --h-text: rgba(44, 57, 70, 1);
+  --light-text: lightgrey;
+  --dark-blue: rgb(44, 57, 70);
+  --form-main-text: rgba(44, 57, 70, 0.7);
+  --input-initial: rgba(239, 240, 241, 0.4);
+  --input-darker: #c0c0c0;
+  --checkbox-light: rgba(239, 240, 241, 1);
+  --focus-blue: darkblue;
+  --submit-btn-primary: rgb(33, 192, 181);
+  --submit-btn-danger: rgb(255, 128, 128);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,7 +36,7 @@ body {
 
 h1,
 h3 {
-  color: rgba(44, 57, 70, 1);
+  color: var(--h-text);
 }
 
 h1 {
@@ -36,7 +50,7 @@ h3 {
 .header {
   text-align: center;
   padding: 20px 0;
-  background-color: rgb(44, 57, 70);
+  background-color: var(--dark-blue);
   margin-bottom: 35px;
 }
 
@@ -44,7 +58,11 @@ h3 {
   max-width: 320px;
   margin: 10px auto 0;
   padding-bottom: 1em;
-  /* to match the length made by the final p tag */
+  /*************************************************
+  padding to match the length made by the final p tag 
+  so that the bg image reaches the bottom 
+  of the viewport
+  **************************************************/
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -67,7 +85,7 @@ hr#fourth {
 p:last-child {
   margin-bottom: 40px;
   text-align: center;
-  color: lightgrey;
+  color: var(--light-text);
 }
 
 /************************************
@@ -76,7 +94,7 @@ Form styles
 
 form {
   margin: 20px 0;
-  color: rgba(44, 57, 70, 0.7);
+  color: var(--form-main-text);
 }
 
 fieldset {
@@ -92,7 +110,7 @@ select {
   margin: 0;
   padding: 15px;
   width: 100%;
-  background-color: rgba(239, 240, 241, 0.4);
+  background-color: var(--input-initial);
   border-radius: 5px;
 
   -moz-transition: 0.5s;
@@ -105,12 +123,12 @@ input[type='tel']:hover,
 input[type='email']:hover,
 textarea:hover,
 select:hover {
-  background-color: #c0c0c0;
+  background-color: var(--input-darker);
 }
 
-/*****************
+/**************************
 If CSS GRID not supported
-******************/
+**************************/
 
 .contact-input,
 .about {
@@ -153,6 +171,23 @@ input[name^='zip'] {
   grid-row: 1 / 2;
 }
 
+/*undo the width for this one element*/
+input[name^='zip'] {
+  justify-self: flex-start;
+  width: auto;
+}
+
+.newsletter textarea {
+  margin-bottom: 30px;
+}
+
+/************************************
+Button and action styles
+************************************/
+
+/**************************
+State Dropdown Styling
+**************************/
 .state-select {
   position: relative;
 }
@@ -174,24 +209,6 @@ input[name^='zip'] {
   -webkit-appearance: none;
   appearance: none;
 }
-
-input[name^='zip'] {
-  justify-self: flex-start;
-  width: auto;
-}
-/*undo the width for this one element*/
-
-input[type='radio'] {
-  margin-right: 9px;
-}
-
-.newsletter textarea {
-  margin-bottom: 30px;
-}
-
-/************************************
-Button and action styles
-************************************/
 
 /************************************
 Newsletter
@@ -221,16 +238,16 @@ Newsletter
   border-radius: 5px;
   height: 17px;
   width: 17px;
-  border: 2px solid rgba(239, 240, 241, 1);
-  background-color: rgba(239, 240, 241, 1);
+  border: 2px solid var(--checkbox-light);
+  background-color: var(--checkbox-light);
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .newsletter__label:hover .newsletter__input ~ .newsletter__checkmark {
-  background-color: #c0c0c0;
-  border: 2px solid #c0c0c0;
+  background-color: var(--input-darker);
+  border: 2px solid var(--input-darker);
 }
 
 .newsletter__input:focus ~ .newsletter__checkmark {
@@ -243,7 +260,6 @@ Newsletter
 
 .newsletter__checkmark::after {
   box-sizing: border-box;
-  /* initially hidden */
   display: none;
   content: '';
   position: absolute;
@@ -254,7 +270,7 @@ Newsletter
   content: '\2713';
   font-size: 11px;
   text-align: center;
-  color: darkblue;
+  color: var(--focus-blue);
   border-radius: 5px;
   width: 17px;
   height: 17px;
@@ -292,8 +308,8 @@ Newsletter Format
   left: 0;
   height: 17px;
   width: 17px;
-  background-color: rgba(239, 240, 241, 1);
-  border: 1px solid rgba(239, 240, 241, 1);
+  background-color: var(--checkbox-light);
+  border: 1px solid var(--checkbox-light);
   border-radius: 50%;
   transition: 0.5s;
 }
@@ -310,17 +326,17 @@ Newsletter Format
   left: 4px;
   height: 7px;
   width: 7px;
-  background-color: darkblue;
+  background-color: var(--focus-blue);
   border-radius: 50%;
 }
 
 .format:hover .format__checkmark {
-  border: 1px solid #c0c0c0;
-  background-color: #c0c0c0;
+  border: 1px solid var(--input-darker);
+  background-color: var(--input-darker);
 }
 
 .format input:focus ~ .format__checkmark {
-  border: 1px solid darkblue;
+  border: 1px solid var(--focus-blue);
 }
 
 /************************************
@@ -329,26 +345,25 @@ Inputs
 
 input:placeholder-shown {
   text-align: right;
-  font-size: 0.8em;
 }
-
-/*not sure if this works in all browsers*/
 
 input[type='text']:focus,
 input[type='email']:focus,
 input[type='tel']:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid darkblue;
-  background-color: #c0c0c0;
+  border: 2px solid var(--focus-blue);
+  background-color: var(--input-darker);
 }
 
-/*submit button transitions*/
+/************************************
+Submit button transitions
+************************************/
 
 input[type='submit'] {
   width: 100%;
   padding: 20px 0;
-  background-color: rgb(33, 192, 181);
+  background-color: var(--submit-btn-primary);
   color: white;
   border-radius: 5px;
   font-size: 1.3em;
@@ -359,11 +374,11 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-  background-color: rgb(255, 128, 128);
+  background-color: var(--submit-btn-danger);
 }
 
 input[type='submit']:active {
-  background-color: rgb(255, 128, 128);
+  background-color: var(--submit-btn-danger);
   box-shadow: inset 0 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
