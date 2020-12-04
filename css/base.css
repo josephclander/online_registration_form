@@ -2,10 +2,18 @@
   box-sizing: border-box;
 }
 
+.bg-wrapper {
+  background: url(../cssTile.svg) fixed no-repeat bottom right;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Merriweather', serif;
   color: #000;
   font-size: 1em;
+  height: 100%;
+  width: 100%;
 }
 
 .header h1 {
@@ -34,8 +42,10 @@ h3 {
 
 .wrapper {
   max-width: 320px;
-  margin: 10px auto;
-  background: white;
+  margin: 10px auto 0;
+  padding-bottom: 1em;
+  /* to match the length made by the final p tag */
+  background: rgba(255, 255, 255, 0.9);
 }
 
 hr#first {
