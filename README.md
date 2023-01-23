@@ -1,10 +1,14 @@
 # Online Registration Form
 
-# Project Overview
+## Project Requirements
 
-In this project you'll build a responsive, mobile-friendly registration form using a wide variety of HTML form input types and attributes. Using the supplied mockup files you'll build a mobile and desktop version of the form using media queries, and a "mobile-first" approach.
+To build a responsive, mobile-friendly registration form using a wide variety of HTML form input types and attributes. Using the supplied mockup files build a mobile and desktop version of the form using media queries, and a "mobile-first" approach.
 
-# Instructions
+## Screenshots
+
+<img width="300px" src="https://user-images.githubusercontent.com/19231569/214016344-a06c9797-d89e-4267-91da-4cdce1f9549e.png"> <img width="300px" src="https://user-images.githubusercontent.com/19231569/214016359-ee080c39-76a2-429e-abfd-3ed9eeac9ec9.png">
+
+## Instructions
 
 ### 1. For this project we will be checking the design in Google Chrome version 48 or higher.
 
@@ -55,7 +59,7 @@ Make sure the HTML file includes the viewport meta tag in the head of the docume
   - If CSS validator flags use of calc, vendor prefixes or pseudo-elements/pseudo-classes these errors should be ignored.
   - If HTML validator flags use of pipe (‘|’) in Google font links/URLs this error can also be ignored.
 
-# Extra Credit
+## Extra Credit
 
 1. Additional breakpoints for other browser widths like tablets.
 
@@ -72,7 +76,7 @@ Make sure the HTML file includes the viewport meta tag in the head of the docume
 7. Use CSS Transition effects for highlighting the look of the form fields both when they are "focused" and "blurred."
    - For example, make a background color fade into view when the field the user clicks into a text field, and fade out when the user clicks or tabs out of the field.
 
-# Notes from the build
+## Notes from the build
 
 Tested on the following browsers: Chrome 87, Safari 14.0.1 and Firefox 84.0b7.
 
